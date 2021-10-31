@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'website-with-tailwind'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('website-with-tailwind');
+    expect(app.title).toEqual('Piotr Kieltyka website with TailwindCSS');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('website-with-tailwind app is running!');
+    expect(compiled.querySelector('.container')?.textContent).toContain('Piotr Kieltyka website with TailwindCSS');
   });
 });

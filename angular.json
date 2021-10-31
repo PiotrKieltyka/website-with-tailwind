@@ -27,6 +27,9 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/.htaccess",
+              "src/robots.txt",
+              "src/sitemap.xml",
               "src/favicon.ico",
               "src/assets"
             ],
@@ -103,9 +106,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "website-with-tailwind"
+  "defaultProject": "website-with-tailwind",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
