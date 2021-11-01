@@ -1,0 +1,21 @@
+span {
+  @apply text-gray-400;
+  &:hover {
+    color: #070f57;
+    animation-play-state: paused;
+  }
+  &:nth-child(n):after {
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 50%;
+    background: #070f57;
+    transition: width .3s ease 0s, left 3s ease 0s;
+    width: 0;
+  }
+  &:nth-child(n):hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
