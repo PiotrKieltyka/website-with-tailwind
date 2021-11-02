@@ -1,6 +1,6 @@
 import { ProjectInterface } from './Project.interface';
 
-export const ProjectsDB: Array<ProjectInterface> = [
+export const ProjectsModel: Array<ProjectInterface> = [
    {
     title: 'Internetics.Group',
     lead_text: 'Internetics.Group landing page',

@@ -1,0 +1,14 @@
+<section class='container w-full h-full flex flex-col items-center justify-between mt-8'>
+  <!-- Blog Logo by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
+  <img class='w-5/6 lg:w-2/3 xl:w-1/2' src='./assets/cesis-studio-illustration-tranmautritam.webp'
+       alt='cesis studio illustration tranmautritam'>
+  <hr class='w-5/6 lg:w-1/2 my-8 border-t-2 border-white border-solid' />
+  <ng-container *ngFor='let blogPost of blogPosts'>
+    <site-blog-card class='w-11/12'
+      [id]='blogPost._id' [title]='blogPost.title'
+      [date]='blogPost.date' [link]='blogPost.link'
+      [content]='blogPost.content'
+    ></site-blog-card>
+    <hr class='w-5/6 lg:w-1/2 my-4 border-t-2 border-white border-solid' />
+  </ng-container>
+</section>

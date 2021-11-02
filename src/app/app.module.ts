@@ -10,6 +10,11 @@ import { ProjectTagsComponent } from './templates/project-tags/project-tags.comp
 import { ProjectCardComponent } from './templates/project-card/project-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavMenuComponent } from './templates/nav-menu/nav-menu.component';
+import { BlogCardComponent } from './templates/blog-card/blog-card.component';
+import { BlogComponent } from './blog/blog.component';
+import { WhoamiComponent } from './whoami/whoami.component';
+import { TechnicalSkillsComponent } from './technical-skills/technical-skills.component';
+import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { NavMenuComponent } from './templates/nav-menu/nav-menu.component';
     ProjectTagsComponent,
     ProjectCardComponent,
     NavBarComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    BlogCardComponent,
+    BlogComponent,
+    WhoamiComponent,
+    TechnicalSkillsComponent,
+    PersonalStudiesComponent
   ],
   imports: [
     BrowserModule,

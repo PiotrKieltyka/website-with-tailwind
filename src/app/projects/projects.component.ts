@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectInterface } from '../models/Project.interface';
-import { ProjectsDB } from '../models/Projects.model';
+import { ProjectsModel } from '../models/Projects.model';
 
 @Component({
   selector: 'site-projects',
@@ -9,6 +9,6 @@ import { ProjectsDB } from '../models/Projects.model';
 })
 export class ProjectsComponent {
 
-  public Projects: Array<ProjectInterface> = ProjectsDB;
+  public Projects: Array<ProjectInterface> = ProjectsModel;
 
 }
