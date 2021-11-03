@@ -15,6 +15,7 @@ import { BlogComponent } from './blog/blog.component';
 import { WhoamiComponent } from './whoami/whoami.component';
 import { TechnicalSkillsComponent } from './technical-skills/technical-skills.component';
 import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
+import { JumboComponent } from './jumbo/jumbo.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PersonalStudiesComponent } from './personal-studies/personal-studies.co
     BlogComponent,
     WhoamiComponent,
     TechnicalSkillsComponent,
-    PersonalStudiesComponent
+    PersonalStudiesComponent,
+    JumboComponent
   ],
   imports: [
     BrowserModule,
