@@ -17,6 +17,7 @@ import { TechnicalSkillsComponent } from './technical-skills/technical-skills.co
 import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
 import { JumboComponent } from './jumbo/jumbo.component';
 import { FooterComponent } from './footer/footer.component';
+import { BLOG_API_TOKEN } from './services/blog-api.token';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    { provide: BLOG_API_TOKEN, useValue: 'https://node.piotrkieltyka.website/api/' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
