@@ -10,7 +10,7 @@
     "host": "node -p \"require('ip').address()\"",
     "ng": "ng",
     "start": "ng serve",
-    "start:host": "ng serve --host=$(npm run host --silent)",
+    "start:host": "NODE_OPTIONS=--max_old_space_size=8192 ng serve --host=$(npm run host --silent)",
     "build": "ng build",
     "build:prod": "NODE_ENV=production ng build --configuration production",
     "watch": "ng build --watch --configuration development",

@@ -16,6 +16,7 @@ import { WhoamiComponent } from './whoami/whoami.component';
 import { TechnicalSkillsComponent } from './technical-skills/technical-skills.component';
 import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
 import { JumboComponent } from './jumbo/jumbo.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { JumboComponent } from './jumbo/jumbo.component';
     WhoamiComponent,
     TechnicalSkillsComponent,
     PersonalStudiesComponent,
-    JumboComponent
+    JumboComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
