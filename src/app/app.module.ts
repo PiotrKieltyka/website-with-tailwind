@@ -18,6 +18,12 @@ import { PersonalStudiesComponent } from './personal-studies/personal-studies.co
 import { JumboComponent } from './jumbo/jumbo.component';
 import { FooterComponent } from './footer/footer.component';
 import { BLOG_API_TOKEN } from './services/blog-api.token';
+import { AuthService } from './services/auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,13 +41,19 @@ import { BLOG_API_TOKEN } from './services/blog-api.token';
     TechnicalSkillsComponent,
     PersonalStudiesComponent,
     JumboComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
+    AuthService,
     { provide: BLOG_API_TOKEN, useValue: 'https://node.piotrkieltyka.website/api/' },
   ],
   bootstrap: [AppComponent]
