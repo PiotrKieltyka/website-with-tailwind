@@ -3,7 +3,7 @@
     Projects
   </p>
   <ng-container
-    *ngFor='let project of Projects; let i = index'
+    *ngFor='let project of projects; let i = index'
   >
     <div
       [ngClass]='i % 2 === 0 ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"'

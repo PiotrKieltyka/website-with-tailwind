@@ -9,6 +9,6 @@ import { ProjectsModel } from '../models/Projects.model';
 })
 export class ProjectsComponent {
 
-  public Projects: Array<ProjectInterface> = ProjectsModel;
+  public projects: Array<ProjectInterface> = ProjectsModel;
 
 }
