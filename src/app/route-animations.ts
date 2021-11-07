@@ -62,10 +62,8 @@ const moveDown = [
     ':enter, :leave',
     style({
       backfaceVisibility: 'hidden',
-      left: 0,
       overflow: 'hidden',
       position: 'fixed',
-      top: 0,
       transformStyle: 'preserve-3d',
       width: '100%',
     }),
@@ -80,11 +78,11 @@ const moveDown = [
           '1s 0s ease',
           keyframes([
             style({
-              offset: 0,
               transform: 'translateY(-100%)',
+              offset: 0,
               'z-index': '9999',
             }),
-            style({ transform: 'translateY(0%)', offset: 1 }),
+            style({ transform: 'translateY(0)', offset: 1 }),
           ]),
         ),
       ],
@@ -113,5 +111,6 @@ export const slideInAnimation = trigger('routeAnimations', [
   transition('WhoamiComp => BlogComp', moveToLeft),
   transition('WhoamiComp => HomeComp', moveToLeft),
   transition('BlogComp => HomeComp', moveToLeft),
-  transition('HomeComp => LoginComp', moveDown),
+  transition('HomeComp => SignInComp', moveDown),
+  transition('WhoamiComp => SignInComp', moveDown),
 ]);

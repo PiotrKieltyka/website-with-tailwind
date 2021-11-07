@@ -5,11 +5,9 @@ import { TechnicalSkillsModel } from '../models/TechnicalSkillsModel';
 @Component({
   selector: 'site-technical-skills',
   templateUrl: './technical-skills.component.html',
-  styleUrls: ['./technical-skills.component.scss']
+  styleUrls: ['./technical-skills.component.scss'],
 })
 export class TechnicalSkillsComponent {
-
   Object = Object;
   technicalSkills: TechnicalSkillsInterface = TechnicalSkillsModel;
-
 }

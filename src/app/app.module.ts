@@ -22,9 +22,10 @@ import { AuthService } from './services/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './login/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignoutComponent } from './signout/signout.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PersonalStudiesComponent,
     JumboComponent,
     FooterComponent,
-    LoginComponent
+    SigninComponent,
+    SignoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,8 +58,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [
     AuthService,
-    { provide: BLOG_API_TOKEN, useValue: 'https://node.piotrkieltyka.website/api/' },
+    {
+      provide: BLOG_API_TOKEN,
+      useValue: 'https://node.piotrkieltyka.website/api/',
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

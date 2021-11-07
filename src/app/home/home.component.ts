@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
     <site-projects></site-projects>
     <site-footer></site-footer>
   `,
-  styles: []
+  styles: [],
 })
 export class HomeComponent {}

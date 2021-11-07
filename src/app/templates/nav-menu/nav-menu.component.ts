@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { NavMenuInterface } from '../../models/NavMenu.interface';
+import { NavMenuModel } from '../../models/NavMenu.model';
 
 @Component({
   selector: 'site-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.scss']
+  styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
+  isLoggedIn: boolean = false;
+  navigation: Array<NavMenuInterface> = NavMenuModel;
 
-  navMenu: Array<{text: string; route: string; icon: string}> = [
-    {text: 'Home', route: 'home', icon: 'fas fa-home'},
-    {text: 'Blog', route: 'blog', icon: 'far fa-sticky-note'},
-    {text: 'Whoami', route: 'whoami', icon: 'fas fa-id-card'}
-  ];
-
+  constructor(public authService: AuthService) {
+    this.authService.isLoggedIn.subscribe(
+      (value: boolean) => (this.isLoggedIn = value),
+    );
+  }
 }

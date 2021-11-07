@@ -17,7 +17,8 @@ export const StudiesModel: Array<Study> = [
     title: 'Data Structures + Algorithms',
     author: 'Andrei Neagoie / ZTM Academy',
     button_icon: 'fas fa-brain',
-    courseUrl: 'https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms',
+    courseUrl:
+      'https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms',
   },
   {
     title: 'Docker for NodeJS Projects',

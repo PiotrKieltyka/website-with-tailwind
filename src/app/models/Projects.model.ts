@@ -1,7 +1,7 @@
 import { ProjectInterface } from './Project.interface';
 
 export const ProjectsModel: Array<ProjectInterface> = [
-   {
+  {
     title: 'Internetics.Group',
     lead_text: 'Internetics.Group landing page',
     date: '2021-08-01',
@@ -100,7 +100,8 @@ export const ProjectsModel: Array<ProjectInterface> = [
       'Project created for an android phones and tablets to monitoring production and packaging products',
     date: '2019-01-29',
     tags: ['Angular', 'Material', 'RWD', 'TypeScript', 'Android', 'JSON'],
-    featured_image: '../assets/projects-thumbnails/04-rwd-production-monitor.webp',
+    featured_image:
+      '../assets/projects-thumbnails/04-rwd-production-monitor.webp',
     project_link: '',
     button_icon: '',
     button_text: '',

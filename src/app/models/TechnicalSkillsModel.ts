@@ -13,21 +13,9 @@ export const TechnicalSkillsModel: TechnicalSkillsInterface = {
     'RestAPI',
     'GraphQL',
   ],
-  versionControlSystems: [
-    'Git',
-    'GitHub',
-    'BitBucket',
-  ],
-  databases: [
-    'MongoDB',
-    'PostgreSQL',
-    'MySQL'
-  ],
-  systems: [
-    'Linux',
-    'Windows',
-    'Mac OS'
-  ],
+  versionControlSystems: ['Git', 'GitHub', 'BitBucket'],
+  databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
+  systems: ['Linux', 'Windows', 'Mac OS'],
   services: [
     'WWW servers',
     'Docker',
@@ -37,5 +25,5 @@ export const TechnicalSkillsModel: TechnicalSkillsInterface = {
     'DNS',
     'DHCP',
     'sharing network resources (samba, nfs, scp, ftp)',
-  ]
-}
+  ],
+};

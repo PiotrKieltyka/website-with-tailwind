@@ -44,6 +44,8 @@ describe('BlogApiService', () => {
     httpClientSpy.get.and.returnValue(of(expectedPosts));
     service
       .getAllPosts()
-      .subscribe((posts: Array<BlogPostInterface>) => expect(posts).toEqual(expectedPosts));
+      .subscribe((posts: Array<BlogPostInterface>) =>
+        expect(posts).toEqual(expectedPosts),
+      );
   });
 });

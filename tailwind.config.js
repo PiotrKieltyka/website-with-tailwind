@@ -2,19 +2,21 @@ module.exports = {
   // mode: "jit",
   purge: {
     enabled: true,
-    content: ['./src/**/*.{html,ts}']
+    content: ['./src/**/*.{html,ts}'],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+      cursor: ['disabled'],
+      opacity: ['disabled'],
+    },
   },
-  plugins: [
-    require('tailwindcss-textshadow')
-  ],
-}
+  plugins: [require('tailwindcss-textshadow')],
+};

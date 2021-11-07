@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'site-footer',
   templateUrl: './footer.component.html',
-  styles: []
+  styles: [],
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}

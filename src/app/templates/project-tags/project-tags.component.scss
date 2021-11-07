@@ -11,7 +11,7 @@ span {
     height: 1px;
     left: 50%;
     background: #070f57;
-    transition: width .3s ease 0s, left 3s ease 0s;
+    transition: width 0.3s ease 0s, left 3s ease 0s;
     width: 0;
   }
   &:nth-child(n):hover:after {

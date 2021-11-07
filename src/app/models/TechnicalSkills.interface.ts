@@ -3,9 +3,9 @@ interface TechnicalSkills {
 }
 
 export interface TechnicalSkillsInterface extends TechnicalSkills {
-  programming: Array<string>,
-  versionControlSystems: Array<string>,
-  databases: Array<string>,
-  systems: Array<string>,
-  services: Array<string>,
+  programming: Array<string>;
+  versionControlSystems: Array<string>;
+  databases: Array<string>;
+  systems: Array<string>;
+  services: Array<string>;
 }

@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  Router,
+  RouterStateSnapshot,
+} from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-
-  constructor(
-    private authService: AuthService,
-    private router: Router,
-  ) {
-  }
+  constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+    state: RouterStateSnapshot,
+  ): boolean {
     const url: string = state.url;
     return this.checkLogin(url);
   }
@@ -26,7 +27,6 @@ export class AuthGuard implements CanActivate {
     }
     this.authService.redirectUrl = url;
     this.router.navigateByUrl('login');
-    return false
-    }
-
+    return false;
+  }
 }

@@ -5,10 +5,8 @@ import { ProjectsModel } from '../models/Projects.model';
 @Component({
   selector: 'site-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-
   public projects: Array<ProjectInterface> = ProjectsModel;
-
 }

@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   animations: [slideInAnimation],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Piotr Kieltyka website with TailwindCSS';
@@ -22,6 +22,6 @@ export class AppComponent {
   prepareRoute(outlet: RouterOutlet) {
     return (
       outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
-    )
+    );
   }
 }

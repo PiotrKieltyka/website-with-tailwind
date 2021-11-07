@@ -5,17 +5,18 @@ import { BlogPostInterface } from '../models/BlogPost.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlogApiService {
-
   constructor(
     private http: HttpClient,
-    @Inject(BLOG_API_TOKEN) private API_URL: string
-  ) { }
+    @Inject(BLOG_API_TOKEN) private API_URL: string,
+  ) {}
 
   getAllPosts(): Observable<Array<BlogPostInterface>> {
-    return this.http.get(this.API_URL + 'posts/') as Observable<Array<BlogPostInterface>>;
+    return this.http.get(this.API_URL + 'posts/') as Observable<
+      Array<BlogPostInterface>
+    >;
   }
 
   getPostById(id: string): Observable<BlogPostInterface> {
@@ -44,6 +45,6 @@ export class BlogApiService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return { headers }
+    return { headers };
   }
 }

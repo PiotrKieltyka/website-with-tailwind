@@ -8,9 +8,8 @@ describe('Error404PageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Error404PageComponent ]
-    })
-    .compileComponents();
+      declarations: [Error404PageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -37,7 +36,7 @@ describe('Error404PageComponent', () => {
     expect(rendered?.textContent).toContain('Are You lost?');
   });
 
-  it('should render 404 error', () =>{
+  it('should render 404 error', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const rendered = compiled.querySelector('.container > div > p');
     expect(rendered?.textContent).toContain('404 - Page not found');
@@ -46,6 +45,8 @@ describe('Error404PageComponent', () => {
   it('should render redirection button with home route', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const rendered = compiled.querySelector('.container > div > button');
-    expect(rendered?.attributes.getNamedItem('routerlink')?.value).toContain('/home');
-  })
+    expect(rendered?.attributes.getNamedItem('routerlink')?.value).toContain(
+      '/home',
+    );
+  });
 });
