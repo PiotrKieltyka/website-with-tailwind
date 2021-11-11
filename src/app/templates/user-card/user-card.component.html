@@ -1,0 +1,17 @@
+<div
+  class='container w-full font-light flex flex-col items-center justify-center space-y-4 rounded-xl shadow-lg py-6'>
+  <div class='w-full h-12 grid grid-cols-6 text-center'>
+    <i class='self-center fas fa-id-card col-start-1'></i>
+    <div class='self-center text-left text-sm col-span-5'>
+      User profile: {{uid}}
+    </div>
+  </div>
+  <img class='w-full h-96 object-cover object-top' src='https://avatars0.githubusercontent.com/u/8939646?s=460&v=4'
+       alt='profile photo'>
+  <div class='w-full h-48 flex flex-col justify-evenly'>
+    <p><i class='px-4 mr-8 fas fa-signature'></i>{{displayName}}</p>
+    <p><i class='px-4 mr-8 fas fa-at'></i>{{email}}</p>
+    <p><i class='px-4 mr-8 fas fa-sms'></i>{{emailVerified}}</p>
+    <p><i class='px-4 mr-8 fas fa-phone-alt'></i>{{phoneNumber}}</p>
+  </div>
+</div>

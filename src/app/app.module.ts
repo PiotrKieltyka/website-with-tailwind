@@ -22,12 +22,13 @@ import { AuthService } from './services/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { SigninComponent } from './login/signin.component';
+import { SigninComponent } from './signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserCardComponent } from './templates/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     SigninComponent,
     SignoutComponent,
     UserinfoComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,9 +4,10 @@ import { Error404PageComponent } from './error/error-404-page.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { WhoamiComponent } from './whoami/whoami.component';
-import { SigninComponent } from './login/signin.component';
+import { SigninComponent } from './signin/signin.component';
 import { AuthService } from './services/auth.service';
 import { SignoutComponent } from './signout/signout.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 const siteRoutes: Routes = [
   { path: 'home', component: HomeComponent, data: { animation: 'HomeComp' } },
@@ -16,6 +17,7 @@ const siteRoutes: Routes = [
     component: WhoamiComponent,
     data: { animation: 'WhoamiComp' },
   },
+  { path: 'userinfo', component: UserinfoComponent },
   {
     path: 'signin',
     component: SigninComponent,
