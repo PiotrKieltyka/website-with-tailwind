@@ -3,7 +3,7 @@ import { slideInAnimation } from './route-animations';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  animations: [slideInAnimation],
+  // animations: [slideInAnimation],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

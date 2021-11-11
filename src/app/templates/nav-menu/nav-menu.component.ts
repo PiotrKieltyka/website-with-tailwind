@@ -19,7 +19,7 @@ import { NavMenuModel } from '../../models/NavMenu.model';
   `,
   styles: [`
     .active {
-      @apply border-b-2 rounded-b-none;
+      @apply bg-gray-200;
     }
   `]
 })

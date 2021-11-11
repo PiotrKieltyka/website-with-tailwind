@@ -28,7 +28,7 @@ const moveToRight = [
       left: -1,
       width: '99%',
     }),
-  ]),
+  ], { optional: true }),
   query(':enter', [style({ left: '99%' })]),
   query(':leave', animateChild()),
   group([

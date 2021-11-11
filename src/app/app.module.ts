@@ -26,6 +26,8 @@ import { SigninComponent } from './login/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoutComponent } from './signout/signout.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,10 +48,12 @@ import { SignoutComponent } from './signout/signout.component';
     FooterComponent,
     SigninComponent,
     SignoutComponent,
+    UserinfoComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

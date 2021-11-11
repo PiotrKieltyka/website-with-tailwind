@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogPostInterface } from '../models/BlogPost.interface';
-import { BlogPostsModel } from '../models/BlogPosts.model';
+import { BlogApiService } from '../services/blog-api.service';
 
 @Component({
   selector: 'site-blog',
@@ -8,5 +8,15 @@ import { BlogPostsModel } from '../models/BlogPosts.model';
   styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent {
-  blogPosts: Array<BlogPostInterface> = BlogPostsModel;
+  blogPosts: Array<BlogPostInterface> = [];
+
+  constructor(
+    private blogApiService: BlogApiService,
+  ) {
+    this.blogApiService.getAllPosts().subscribe(
+      (posts: Array<BlogPostInterface>) => {
+        this.blogPosts = posts;
+      },
+    )
+  }
 }
