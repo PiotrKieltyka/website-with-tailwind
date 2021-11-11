@@ -6,12 +6,13 @@
       User profile: {{uid}}
     </div>
   </div>
-  <img class='w-full h-96 object-cover object-top' src='https://avatars0.githubusercontent.com/u/8939646?s=460&v=4'
+  <img class='w-full h-96 object-cover object-top' src='{{photoURL}}'
        alt='profile photo'>
   <div class='w-full h-48 flex flex-col justify-evenly'>
-    <p><i class='px-4 mr-8 fas fa-signature'></i>{{displayName}}</p>
+    <p><i class='px-4 mr-7 fas fa-signature'></i>{{displayName}}</p>
     <p><i class='px-4 mr-8 fas fa-at'></i>{{email}}</p>
     <p><i class='px-4 mr-8 fas fa-sms'></i>{{emailVerified}}</p>
     <p><i class='px-4 mr-8 fas fa-phone-alt'></i>{{phoneNumber}}</p>
   </div>
+  <button class='text-sm cursor-pointer p-2 text-red-400' (click)='openDialog()'>edit</button>
 </div>

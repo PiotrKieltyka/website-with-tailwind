@@ -28,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UserCardComponent } from './templates/user-card/user-card.component';
+import { UserCardComponent, UserProfileDialog } from './templates/user-card/user-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { UserCardComponent } from './templates/user-card/user-card.component';
     SigninComponent,
     SignoutComponent,
     UserinfoComponent,
+    UserProfileDialog,
     UserCardComponent,
   ],
   imports: [
@@ -61,6 +63,7 @@ import { UserCardComponent } from './templates/user-card/user-card.component';
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [
     AuthService,
