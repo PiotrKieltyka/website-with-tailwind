@@ -11,7 +11,7 @@ import { NavMenuModel } from '../../models/NavMenu.model';
         <a class='px-1 md:px-8 font-light text-sm cursor-pointer hover:bg-gray-200 rounded-xl px-4 py-2'
            *ngIf='(navItem.protected === false) || (navItem.protected && isLoggedIn)'
            routerLink='{{navItem.route}}' routerLinkActive='active'
-        ><i class='{{navItem.icon}} mr-2 hidden sm:inline'></i>
+        ><i class='{{navItem.icon}} mr-2 hidden lg:inline'></i>
           {{navItem.text}}
         </a>
       </ng-container>

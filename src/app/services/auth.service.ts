@@ -2,12 +2,14 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
+import { take } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn = new EventEmitter<boolean>(false);
+  isLoggedIn = new BehaviorSubject<boolean>(false);
   redirectUrl: string = '';
   public userData: firebase.User | undefined;
 
@@ -39,7 +41,7 @@ export class AuthService {
     return this.angularFireAuth
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
-        this.isLoggedIn.emit(true);
+        this.isLoggedIn.next(true);
         this.userData = res.user as firebase.User;
         this.router.navigateByUrl('userinfo');
       })
@@ -48,7 +50,7 @@ export class AuthService {
 
   signout(): void {
     this.angularFireAuth.signOut().then(() => {
-      this.isLoggedIn.emit(false);
+      this.isLoggedIn.next(false);
       sessionStorage.removeItem('user');
       this.router.navigateByUrl('home');
     });

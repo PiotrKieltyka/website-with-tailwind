@@ -105,12 +105,18 @@ const moveDown = [
 ];
 
 export const slideInAnimation = trigger('routeAnimations', [
+  transition('HomeComp => UserComp', moveToRight),
   transition('HomeComp => BlogComp', moveToRight),
-  transition('BlogComp => WhoamiComp', moveToRight),
   transition('HomeComp => WhoamiComp', moveToRight),
-  transition('WhoamiComp => BlogComp', moveToLeft),
-  transition('WhoamiComp => HomeComp', moveToLeft),
+  transition('UserComp => BlogComp', moveToRight),
+  transition('UserComp => WhoamiComp', moveToRight),
+  transition('UserComp => HomeComp', moveToLeft),
+  transition('BlogComp => WhoamiComp', moveToRight),
+  transition('BlogComp => UserComp', moveToLeft),
   transition('BlogComp => HomeComp', moveToLeft),
+  transition('WhoamiComp => BlogComp', moveToLeft),
+  transition('WhoamiComp => UserComp', moveToLeft),
+  transition('WhoamiComp => HomeComp', moveToLeft),
   transition('HomeComp => SignInComp', moveDown),
   transition('WhoamiComp => SignInComp', moveDown),
 ]);
