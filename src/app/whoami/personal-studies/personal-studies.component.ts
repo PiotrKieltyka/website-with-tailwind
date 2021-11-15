@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Study } from '../models/Study.interface';
-import { StudiesModel } from '../models/Studies.model';
+import { Study } from '../../models/Study.interface';
+import { StudiesModel } from '../../models/Studies.model';
 
 @Component({
   selector: 'site-personal-studies',

@@ -8,12 +8,13 @@
   >
     <div
       [ngClass]='i % 2 === 0 ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"'
-      [attr.data-aos]='i % 2 === 0 ? "fade-left" : "fade-right"' data-aos-duration='400' data-aos-delay='200'
+      [attr.data-aos]='i % 2 === 0 ? "fade-left" : "fade-right"' data-aos-duration='400'
       class='flex items-center justify-evenly my-8 border-white border-0 sm:border-2 border-solid md:border-0'
     >
       <div class='w-11/12 lg:w-7/12 lg:shadow-xl rounded-2xl'>
-        <img class='border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl' src='{{ project.featured_image }}' title='{{ project.title }}'
-             alt='{{ project.title }}'>
+        <img [attr.data-aos]='i % 2 === 0 ? "flip-left" : "flip-right"' data-aos-duration='400' data-aos-delay='300'
+          class='border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl' src='{{ project.featured_image }}' title='{{ project.title }}'
+             alt='{{ project.title }}' />
       </div>
       <div class='w-11/12 lg:w-4/12 h-52 lg:shadow-xl rounded-2xl'>
         <site-project-card

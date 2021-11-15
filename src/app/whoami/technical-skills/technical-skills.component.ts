@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TechnicalSkillsInterface } from '../models/TechnicalSkills.interface';
-import { TechnicalSkillsModel } from '../models/TechnicalSkillsModel';
+import { TechnicalSkillsInterface } from '../../models/TechnicalSkills.interface';
+import { TechnicalSkillsModel } from '../../models/TechnicalSkillsModel';
 
 @Component({
   selector: 'site-technical-skills',

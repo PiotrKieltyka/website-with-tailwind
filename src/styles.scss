@@ -39,7 +39,7 @@ $website-with-tailwind-theme: mat.define-light-theme((
 
 html {
   --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  @apply bg-gray-100;
 }
 
 body {

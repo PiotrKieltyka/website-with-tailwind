@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,23 +19,17 @@ import { NavMenuComponent } from './templates/nav-menu/nav-menu.component';
 import { BlogCardComponent } from './templates/blog-card/blog-card.component';
 import { BlogComponent } from './blog/blog.component';
 import { WhoamiComponent } from './whoami/whoami.component';
-import { TechnicalSkillsComponent } from './technical-skills/technical-skills.component';
-import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
-import { JumboComponent } from './jumbo/jumbo.component';
+import { TechnicalSkillsComponent } from './whoami/technical-skills/technical-skills.component';
+import { PersonalStudiesComponent } from './whoami/personal-studies/personal-studies.component';
+import { JumboComponent } from './home/jumbo/jumbo.component';
 import { FooterComponent } from './footer/footer.component';
 import { BLOG_API_TOKEN } from './services/blog-api.token';
 import { AuthService } from './services/auth.service';
-import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SigninComponent } from './signin/signin.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
-import { HttpClientModule } from '@angular/common/http';
 import { UserCardComponent, UserProfileDialog } from './templates/user-card/user-card.component';
-import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
