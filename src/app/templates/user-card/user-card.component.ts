@@ -24,7 +24,6 @@ export class UserCardComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(UserProfileDialog, {
-      width: '350px',
       data: {
         uid: this.uid,
         displayName: this.displayName,

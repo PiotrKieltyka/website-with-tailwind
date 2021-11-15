@@ -17,7 +17,7 @@ import { ProjectTagsComponent } from './templates/project-tags/project-tags.comp
 import { ProjectCardComponent } from './templates/project-card/project-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavMenuComponent } from './templates/nav-menu/nav-menu.component';
-import { BlogCardComponent, BlogPostDialog } from './templates/blog-card/blog-card.component';
+import { BlogCardComponent } from './templates/blog-card/blog-card.component';
 import { BlogComponent } from './blog/blog.component';
 import { WhoamiComponent } from './whoami/whoami.component';
 import { TechnicalSkillsComponent } from './whoami/technical-skills/technical-skills.component';
@@ -32,6 +32,7 @@ import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { UserCardComponent, UserProfileDialog } from './templates/user-card/user-card.component';
 import { MatInputModule } from '@angular/material/input';
+import { BlogPostDialogComponent } from './blog/blog-post-dialog.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { MatInputModule } from '@angular/material/input';
     UserinfoComponent,
     UserProfileDialog,
     UserCardComponent,
-    BlogPostDialog,
+    BlogPostDialogComponent,
   ],
   imports: [
     BrowserModule,

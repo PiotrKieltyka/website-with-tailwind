@@ -17,6 +17,6 @@ export class BlogComponent {
       (posts: Array<BlogPostInterface>) => {
         this.blogPosts = posts;
       },
-    )
+    );
   }
 }
