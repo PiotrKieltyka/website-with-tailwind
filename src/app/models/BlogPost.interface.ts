@@ -1,5 +1,5 @@
 export interface BlogPostInterface {
-  _id?: string;
+  _id: string;
   title: string;
   date: string;
   link?: string;

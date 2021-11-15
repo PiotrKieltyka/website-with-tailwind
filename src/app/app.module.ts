@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { ProjectTagsComponent } from './templates/project-tags/project-tags.comp
 import { ProjectCardComponent } from './templates/project-card/project-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavMenuComponent } from './templates/nav-menu/nav-menu.component';
-import { BlogCardComponent } from './templates/blog-card/blog-card.component';
+import { BlogCardComponent, BlogPostDialog } from './templates/blog-card/blog-card.component';
 import { BlogComponent } from './blog/blog.component';
 import { WhoamiComponent } from './whoami/whoami.component';
 import { TechnicalSkillsComponent } from './whoami/technical-skills/technical-skills.component';
@@ -30,6 +31,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { UserCardComponent, UserProfileDialog } from './templates/user-card/user-card.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import { UserCardComponent, UserProfileDialog } from './templates/user-card/user
     UserinfoComponent,
     UserProfileDialog,
     UserCardComponent,
+    BlogPostDialog,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,8 @@ import { UserCardComponent, UserProfileDialog } from './templates/user-card/user
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatInputModule,
   ],
   providers: [
     AuthService,
