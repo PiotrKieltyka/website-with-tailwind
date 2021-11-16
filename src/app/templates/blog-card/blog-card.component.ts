@@ -5,6 +5,7 @@ import { BlogPostInterface } from '../../models/BlogPost.interface';
 import { MatDialog } from '@angular/material/dialog';
 import * as moment from 'moment';
 import { BlogPostDialogComponent } from '../../blog/blog-post-dialog.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'site-blog-card',
@@ -20,7 +21,7 @@ import { BlogPostDialogComponent } from '../../blog/blog-post-dialog.component';
             href='{{link}}'
           >Learn more</a>
         </ng-template>
-        <ng-template [ngIf]='isLoggedIn'>
+        <ng-template [ngIf]='isLoggedIn$ | async'>
           <button
             class='text-xs cursor-pointer px-4 py-1 text-red-400 rounded hover:bg-red-400 hover:text-white hover:shadow-md transition-all'
             (click)='openEditPostDialog(id)'>edit
@@ -32,7 +33,7 @@ import { BlogPostDialogComponent } from '../../blog/blog-post-dialog.component';
   styles: [],
 })
 export class BlogCardComponent {
-  @Input() isLoggedIn: boolean = false;
+  @Input() isLoggedIn$: Observable<boolean>;
   @Input() id: string = '';
   @Input() title: string = '';
   @Input() date: string = '';
@@ -44,11 +45,7 @@ export class BlogCardComponent {
     private blogApiService: BlogApiService,
     public dialog: MatDialog,
   ) {
-    this.authService.isLoggedIn.subscribe(
-      (isLogged) => {
-        this.isLoggedIn = isLogged;
-      },
-    );
+    this.isLoggedIn$ = this.authService.isLoggedIn
   }
 
   openEditPostDialog(id: string): void {
