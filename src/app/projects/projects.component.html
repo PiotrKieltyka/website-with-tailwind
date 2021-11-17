@@ -1,6 +1,7 @@
 <section id='projects' class='container w-full mt-4 z-0'>
-  <p class='sticky top-0 text-shadow-sm bg-gray-100 w-11/12 text-gray-700 text-center text-2xl font-medium py-4 mx-auto z-20'
-  data-aos='fade-in'>
+  <p
+    class='sticky top-0 text-shadow-sm bg-gray-100 w-11/12 text-gray-700 text-center text-2xl font-medium py-4 mx-auto z-20'
+    data-aos='fade-in'>
     Projects
   </p>
   <ng-container
@@ -8,15 +9,16 @@
   >
     <div
       [ngClass]='i % 2 === 0 ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"'
-      [attr.data-aos]='i % 2 === 0 ? "fade-left" : "fade-right"' data-aos-duration='400'
-      class='flex items-center justify-evenly my-8 border-white border-0 sm:border-2 border-solid md:border-0'
-    >
-      <div class='w-11/12 lg:w-7/12 lg:shadow-xl rounded-2xl'>
-        <img [attr.data-aos]='i % 2 === 0 ? "flip-left" : "flip-right"' data-aos-duration='400' data-aos-delay='300'
-          class='border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl' src='{{ project.featured_image }}' title='{{ project.title }}'
-             alt='{{ project.title }}' />
+      class='flex items-center justify-evenly my-8 border-white border-0 sm:border-2 border-solid md:border-0'>
+      <div class='w-11/12 lg:w-7/12 lg:shadow-xl rounded-2xl'
+           [attr.data-aos]='i % 2 === 0 ? "flip-left" : "flip-right"' data-aos-duration='400' data-aos-delay='300'>
+        <img
+          class='object-fit object-center border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl'
+          src='{{ project.featured_image }}' title='{{ project.title }}'
+          alt='{{ project.title }}' />
       </div>
-      <div class='w-11/12 lg:w-4/12 h-52 lg:shadow-xl rounded-2xl'>
+      <div class='w-11/12 lg:w-4/12 h-52 lg:shadow-xl rounded-2xl'
+           [attr.data-aos]='i % 2 === 0 ? "zoom-in-left" : "zoom-in-right"' data-aos-duration='400'>
         <site-project-card
           class='flex flex-col justify-evenly w-full h-full border-0 md:border-b-2 md:border-l-2 md:border-r-2 lg:border-t-2 border-white border-solid rounded-b-2xl lg:rounded-2xl'
           [title]='project.title' [leadText]='project.lead_text'

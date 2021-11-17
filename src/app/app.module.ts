@@ -30,7 +30,10 @@ import { environment } from '../environments/environment';
 import { SigninComponent } from './signin/signin.component';
 import { SignoutComponent } from './signout/signout.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
-import { UserCardComponent, UserProfileDialog } from './templates/user-card/user-card.component';
+import {
+  UserCardComponent,
+  UserProfileDialog,
+} from './templates/user-card/user-card.component';
 import { MatInputModule } from '@angular/material/input';
 import { BlogPostDialogComponent } from './blog/blog-post-dialog.component';
 

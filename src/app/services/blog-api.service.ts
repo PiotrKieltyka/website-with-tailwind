@@ -1,5 +1,9 @@
 import { Inject, Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { BLOG_API_TOKEN } from './blog-api.token';
 import { BlogPostInterface } from '../models/BlogPost.interface';
 import { Observable, throwError } from 'rxjs';

@@ -17,9 +17,12 @@ const siteRoutes: Routes = [
     component: WhoamiComponent,
     data: { animation: 'WhoamiComp' },
   },
-  { path: 'userinfo', component: UserinfoComponent,
+  {
+    path: 'userinfo',
+    component: UserinfoComponent,
     canActivate: [AuthGuard],
-    data: { animation: 'UserComp' } },
+    data: { animation: 'UserComp' },
+  },
   {
     path: 'signin',
     component: SigninComponent,
@@ -42,5 +45,4 @@ const siteRoutes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

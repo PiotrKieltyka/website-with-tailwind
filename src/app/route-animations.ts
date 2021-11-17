@@ -21,14 +21,18 @@ export const transAnimation = animation([
 
 const moveToRight = [
   style({ position: 'relative' }),
-  query(':enter, :leave', [
-    style({
-      position: 'absolute',
-      top: -1,
-      left: -1,
-      width: '99%',
-    }),
-  ], { optional: true }),
+  query(
+    ':enter, :leave',
+    [
+      style({
+        position: 'absolute',
+        top: -1,
+        left: -1,
+        width: '99%',
+      }),
+    ],
+    { optional: true },
+  ),
   query(':enter', [style({ left: '99%' })]),
   query(':leave', animateChild()),
   group([
