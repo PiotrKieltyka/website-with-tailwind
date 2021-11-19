@@ -3,9 +3,9 @@ import { ProjectInterface } from './Project.interface';
 export const ProjectsModel: Array<ProjectInterface> = [
   {
     title: 'Internetics.Group',
-    lead_text: 'Internetics.Group landing page',
+    lead_text: 'Internetics.Group landing page with Deno back-end',
     date: '2021-08-01',
-    tags: ['Angular', 'TypeScript', 'TailwindCSS', 'RWD'],
+    tags: ['Angular', 'TypeScript', 'TailwindCSS', 'RWD', 'Deno'],
     featured_image: '../assets/projects-thumbnails/08-internetics-page.webp',
     project_link: 'https://internetics.piotrkieltyka.website',
     button_icon: 'fab fa-angular fa-lg',
