@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build using NodeJS
+      - name: Use Node 14
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
@@ -41,11 +41,11 @@ jobs:
       - name: Build project
         run: npm run build:prod
 
-      - name: Deploy on server
+      - name: Deploy project
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/website-with-tailwindcss/
-          server-dir: ./www/website-with-tailwindcss/
+          local-dir: ./dist/website-with-tailwind/
+          server-dir: ./www/website-with-tailwind/
