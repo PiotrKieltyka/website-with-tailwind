@@ -46,6 +46,7 @@ $website-with-tailwind-theme: mat.define-light-theme(
 html {
   --tw-bg-opacity: 1;
   @apply bg-gray-100;
+  overflow-x: hidden;
 }
 
 body {
