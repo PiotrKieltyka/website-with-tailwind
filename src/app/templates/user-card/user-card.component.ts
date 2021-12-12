@@ -57,7 +57,7 @@ export class UserCardComponent {
             >Display Name</label
           >
           <input
-            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.displayName"
             #displayName
           />
@@ -65,7 +65,7 @@ export class UserCardComponent {
             >E-Mail</label
           >
           <input
-            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.email"
             #email
           />
@@ -73,7 +73,7 @@ export class UserCardComponent {
             >Phone Number</label
           >
           <input
-            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.phoneNumber"
             #phoneNumber
           />
@@ -81,7 +81,7 @@ export class UserCardComponent {
             >Profile Photo URL</label
           >
           <input
-            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.photoURL"
             #photoURL
           />

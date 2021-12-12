@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
             (navItem.protected && isLoggedIn$ | async)
           "
           routerLink="{{ navItem.route }}"
-          [routerLinkActive]="i === 2 ? 'active-indigo' : 'active-blue'"
+          [routerLinkActive]="i === 0 ? 'active-blue' : 'active-indigo'"
           ><i class="{{ navItem.icon }} mr-2 hidden lg:inline"></i>
           {{ navItem.text }}
         </a>

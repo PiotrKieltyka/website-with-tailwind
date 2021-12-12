@@ -45,13 +45,14 @@ $website-with-tailwind-theme: mat.define-light-theme(
 
 html {
   --tw-bg-opacity: 1;
-  @apply bg-gray-100;
+  // @apply bg-slate-100;
+  @apply bg-slate-100;
   overflow-x: hidden;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  @apply text-gray-600;
+  @apply text-slate-600;
 }
 
 ::-webkit-scrollbar {

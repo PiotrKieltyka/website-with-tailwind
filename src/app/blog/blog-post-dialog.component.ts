@@ -45,7 +45,7 @@ export const MY_FORMATS = {
             >Title</label
           >
           <input
-            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.title"
             #title
           />
@@ -67,7 +67,7 @@ export const MY_FORMATS = {
             >Link URL</label
           >
           <input
-            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.link"
             #link
           />
@@ -75,7 +75,7 @@ export const MY_FORMATS = {
             >Content</label
           >
           <input
-            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-gray-100 border-none font-light text-gray-600"
+            class="w-full focus:outline-none ring-white focus:ring-2 focus:ring-gray-700 p-2 rounded-xl bg-slate-100 border-none font-light text-gray-600"
             [(ngModel)]="data.content"
             #content
           />

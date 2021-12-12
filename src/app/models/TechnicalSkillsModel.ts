@@ -5,6 +5,7 @@ export const TechnicalSkillsModel: TechnicalSkillsInterface = {
     'TypeScript/JavaScript',
     'Angular',
     'Node',
+    'Deno',
     'RxJS',
     'NgRx',
     'PNPM/NPM/Yarn',

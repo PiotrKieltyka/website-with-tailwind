@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
         </p>
         <button
           routerLink="/home"
-          class="w-11/12 lg:w-1/4 h-10 my-4 uppercase bg-white hover:shadow-lg hover:bg-gray-700 hover:text-white transition-all shadow-inner rounded-lg"
+          class="w-11/12 lg:w-1/4 h-10 my-4 uppercase bg-white hover:shadow-lg hover:bg-slate-700 hover:text-white transition-all shadow-inner rounded-lg"
         >
           <span>Go to homepage</span>
         </button>
