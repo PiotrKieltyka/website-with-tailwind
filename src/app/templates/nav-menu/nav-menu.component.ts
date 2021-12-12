@@ -8,15 +8,15 @@ import { Observable } from 'rxjs';
   selector: 'site-nav-menu',
   template: `
     <nav class="flex flex-row items-center justify-between space-x-1">
-      <ng-container *ngFor="let navItem of navigation">
+      <ng-container *ngFor="let navItem of navigation; let i = index">
         <a
-          class="px-1 md:px-4 lg:px-8 py-2 font-light text-sm cursor-pointer hover:bg-gray-200 rounded-xl"
+          class="px-1 md:px-4 lg:px-8 py-2 font-light text-sm cursor-pointer hover:bg-white hover:shadow hover:shadow-blue-200 rounded-xl transition-colors"
           *ngIf="
             navItem.protected === false ||
             (navItem.protected && isLoggedIn$ | async)
           "
           routerLink="{{ navItem.route }}"
-          routerLinkActive="active"
+          [routerLinkActive]="i === 2 ? 'active-indigo' : 'active-blue'"
           ><i class="{{ navItem.icon }} mr-2 hidden lg:inline"></i>
           {{ navItem.text }}
         </a>
@@ -25,8 +25,15 @@ import { Observable } from 'rxjs';
   `,
   styles: [
     `
-      .active {
-        @apply bg-gray-200;
+      .active-blue {
+        @apply bg-white;
+        @apply shadow-inner;
+        @apply shadow-blue-300;
+      }
+      .active-indigo {
+        @apply bg-white;
+        @apply shadow-inner;
+        @apply shadow-indigo-300;
       }
     `,
   ],

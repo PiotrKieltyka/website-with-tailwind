@@ -13,14 +13,14 @@
       <div class='w-11/12 lg:w-7/12 lg:shadow-xl rounded-2xl'
            [attr.data-aos]='i % 2 === 0 ? "flip-left" : "flip-right"' data-aos-duration='400' data-aos-delay='300'>
         <img
-          class='object-fit object-center border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl'
+          class='object-fit object-center border-0 md:border-t-2 md:border-r-2 md:border-l-2 lg:border-t-2 border-white border-solid rounded-t-2xl lg:rounded-2xl hover:scale-105 transition-all'
           src='{{ project.featured_image }}' title='{{ project.title }}'
           alt='{{ project.title }}' />
       </div>
       <div class='w-11/12 lg:w-4/12 h-52 lg:shadow-xl rounded-2xl'
            [attr.data-aos]='i % 2 === 0 ? "zoom-in-left" : "zoom-in-right"' data-aos-duration='400'>
         <site-project-card
-          class='flex flex-col justify-evenly w-full h-full border-0 md:border-b-2 md:border-l-2 md:border-r-2 lg:border-t-2 border-white border-solid rounded-b-2xl lg:rounded-2xl'
+          class='flex flex-col justify-evenly w-full h-full border-0 md:border-b-2 md:border-l-2 md:border-r-2 lg:border-t-2 border-white bg-gradient-to-tr from-slate-100 to-gray-200 border-solid rounded-b-2xl lg:rounded-2xl'
           [title]='project.title' [leadText]='project.lead_text'
           [projectURL]='project.project_link' [buttonIcon]='project.button_icon'
           [buttonText]='project.button_text' [index]='i'

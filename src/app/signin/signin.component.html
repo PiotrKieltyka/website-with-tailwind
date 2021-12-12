@@ -5,7 +5,7 @@
       [formGroup]='loginForm'
     >
       <input
-        class='p-2 text-sm font-light rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-gray-700'
+        class='p-2 text-sm font-light rounded-lg shadow-slate-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-gray-700'
         placeholder='root'
         type='text'
         formControlName='email'
@@ -13,14 +13,14 @@
         [ngClass]="(loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched) ||
           loginForm.get('email')?.errors?.['email'] ? 'ring-2 ring-red-500' : ''">
       <input
-        class='p-2 text-sm font-light rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-gray-700'
+        class='p-2 text-sm font-light rounded-lg shadow-slate-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-gray-700'
         placeholder='passwd'
         type='password'
         formControlName='password'
         autocomplete='off'
         [ngClass]="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched ? 'ring-2 ring-red-500' : ''">
       <button
-        class='px-4 py-2 rounded-lg bg-white shadow-inner active:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
+        class='px-4 py-2 rounded-lg bg-white shadow-slate-400 shadow-inner active:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
         (click)="
             authService.signIn(
               loginForm.get('email')?.value,

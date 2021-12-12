@@ -1,7 +1,7 @@
 span {
-  @apply text-gray-500;
+  @apply text-slate-600;
   &:hover {
-    color: #070f57;
+    @apply text-slate-700;
     animation-play-state: paused;
   }
   &:nth-child(n):after {
@@ -10,7 +10,7 @@ span {
     display: block;
     height: 1px;
     left: 50%;
-    background: #070f57;
+    @apply bg-slate-700;
     transition: width 0.3s ease 0s, left 3s ease 0s;
     width: 0;
   }
