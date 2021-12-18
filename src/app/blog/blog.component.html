@@ -8,7 +8,7 @@
       (click)='openAddPostDialog()'>add
     </button>
   </ng-template>
-  <hr class='w-5/6 lg:w-1/2 my-8 border-t-2 border-white border-solid' data-aos='zoom-in' data-aos-duration='400'>
+  <hr [ngStyle]='{"border-color":"#e9eff5"}' class='w-5/6 lg:w-1/2 my-8 border-t-2 border-solid' data-aos='zoom-in' data-aos-duration='400'>
   <ng-container *ngFor='let blogPost of blogPosts$ | async; let i = index'>
     <site-blog-card class='w-11/12' [attr.data-aos]='i % 2 === 0 ? "fade-left" : "fade-right"'
                     data-aos-duration='400' data-aos-delay='200'
@@ -16,6 +16,11 @@
                     [date]='blogPost.date' [link]='blogPost.link'
                     [content]='blogPost.content'
     ></site-blog-card>
-    <hr class='w-5/6 lg:w-1/2 my-4 border-t-2 border-white border-solid'>
+    <hr class='w-5/6 lg:w-1/2 my-4 border-t-2 border-solid'
+        [ngStyle]='i % 5 === 0 ? {"border-color": "#fd8921"} :
+        i % 4 === 0 ? {"border-color": "#5f9cb8"} :
+        i % 3 === 0 ? {"border-color": "#adcceb"} :
+        i % 2 === 0 ? {"border-color": "#191d47"} :
+        i % 1 === 0 ? {"border-color": "#3f4daa"} : {"border-color": "#e85a30"}'>
   </ng-container>
 </section>

@@ -1,7 +1,7 @@
 span {
   @apply text-slate-600;
   &:hover {
-    @apply text-slate-700;
+    @apply text-slate-900;
     animation-play-state: paused;
   }
   &:nth-child(n):after {

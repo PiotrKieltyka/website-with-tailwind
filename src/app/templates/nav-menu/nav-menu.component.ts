@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
     <nav class="flex flex-row items-center justify-between space-x-1">
       <ng-container *ngFor="let navItem of navigation; let i = index">
         <a
-          class="px-1 md:px-4 lg:px-8 py-2 font-light text-sm cursor-pointer hover:bg-white hover:shadow hover:shadow-blue-200 rounded-xl transition-colors"
+          class="px-2 md:px-4 lg:px-8 py-2 font-light text-sm cursor-pointer hover:bg-white hover:shadow hover:shadow-blue-200 rounded-lg transition-colors"
           *ngIf="
             navItem.protected === false ||
             (navItem.protected && isLoggedIn$ | async)

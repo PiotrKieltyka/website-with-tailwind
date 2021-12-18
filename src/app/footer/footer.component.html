@@ -2,22 +2,22 @@
   <hr class='border-white w-5/6 lg:w-1/2 my-8 border-t-2 border-solid mx-auto'>
   <div class='max-w-screen-xl px-4 py-4 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
     <nav class='flex flex-wrap justify-center -mx-5 -my-2'>
-      <div class='px-5 py-2'>
+      <div class='px-5 py-2' *ngIf='route.snapshot.url[0].path !== "home"'>
         <a routerLink='/home' class='text-base leading-6 text-gray-500 hover:text-gray-900'>
           Home
         </a>
       </div>
-      <div class='px-5 py-2'>
+      <div class='px-5 py-2' *ngIf='route.snapshot.url[0].path !== "blog"'>
         <a routerLink='/blog' class='text-base leading-6 text-gray-500 hover:text-gray-900'>
           Blog
         </a>
       </div>
-      <div class='px-5 py-2'>
+      <div class='px-5 py-2' *ngIf='route.snapshot.url[0].path !== "whoami"'>
         <a routerLink='/whoami' class='text-base leading-6 text-gray-500 hover:text-gray-900'>
           Whoami
         </a>
       </div>
-      <div class='px-5 py-2'>
+      <div class='px-5 py-2' *ngIf='route.snapshot.url[0].path !== "signin"'>
         <a routerLink='/signin' class='text-base leading-6 text-gray-500 hover:text-gray-900'>
           SignIn
         </a>
