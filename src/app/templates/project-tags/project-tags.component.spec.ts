@@ -31,9 +31,9 @@ describe('TagsComponent', () => {
 
     expect(rendered?.length).toBe(expectedTags.length);
 
-    expect(rendered?.item(0)?.classList.contains('text-xs')).toBeTrue();
-    expect(rendered?.item(1)?.classList.contains('font-light')).toBeTrue();
-    expect(rendered?.item(2)?.classList.contains('text-shadow-sm')).toBeTrue();
+    expect(rendered?.item(0)?.classList.contains('text-xs')).toBeTruthy();
+    expect(rendered?.item(1)?.classList.contains('font-light')).toBeTruthy();
+    expect(rendered?.item(2)?.classList.contains('text-shadow-sm')).toBeTruthy();
 
     expect(rendered?.item(0)?.textContent).toBe('Angular');
     expect(rendered?.item(1)?.textContent).toBe('TypeScript');

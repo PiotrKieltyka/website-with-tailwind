@@ -1,6 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
+import { ActivatedRoute } from '@angular/router';
+
+const mockActivatedRoute = {
+  snapshot: {
+    url: [
+      { path: 'home' },
+    ],
+  },
+};
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -9,6 +18,7 @@ describe('FooterComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [FooterComponent],
+      providers: [{ provide: ActivatedRoute, useValue: mockActivatedRoute }],
     }).compileComponents();
   });
 

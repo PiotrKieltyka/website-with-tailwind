@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
+import { NavMenuComponent } from '../templates/nav-menu/nav-menu.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../../environments/environment';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavBarComponent', () => {
   let component: NavBarComponent;
@@ -8,7 +12,14 @@ describe('NavBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavBarComponent],
+      declarations: [
+        NavBarComponent,
+        NavMenuComponent,
+      ],
+      imports: [
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        RouterTestingModule,
+      ]
     }).compileComponents();
   });
 

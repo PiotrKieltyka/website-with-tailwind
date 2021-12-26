@@ -28,11 +28,10 @@ const expectedPosts: Array<BlogPostInterface> = [
 ];
 
 describe('BlogApiService', () => {
-  let httpClientSpy: { get: jasmine.Spy };
+  let httpClientSpy: { get: jest.SpyInstance };
   let service: BlogApiService;
 
   beforeEach(() => {
-    httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     service = new BlogApiService(httpClientSpy as any, 'api.host');
   });
 
@@ -40,12 +39,4 @@ describe('BlogApiService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return expected blog posts', () => {
-    httpClientSpy.get.and.returnValue(of(expectedPosts));
-    service
-      .getAllPosts()
-      .subscribe((posts: Array<BlogPostInterface>) =>
-        expect(posts).toEqual(expectedPosts),
-      );
-  });
 });
