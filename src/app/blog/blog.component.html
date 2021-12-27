@@ -2,11 +2,15 @@
   <!-- Blog Logo by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
   <img class='w-5/6 lg:w-2/3 xl:w-1/2' src='./assets/cesis-studio-illustration-tranmautritam.webp'
        alt='cesis studio illustration tranmautritam'>
-  <ng-template [ngIf]='isLoggedIn$ | async'>
+  <ng-template [ngIf]='isLoggedIn$ | async' [ngIfElse]='error'>
     <button
       class='text-xs cursor-pointer px-4 py-1 text-green-400 rounded hover:bg-green-400 hover:text-white hover:shadow-md transition-all'
       (click)='openAddPostDialog()'>add
     </button>
+  </ng-template>
+  <ng-template #error>
+    <hr [ngStyle]='{"border-color":"#e9eff5"}' class='w-5/6 lg:w-1/2 my-8 border-t-2 border-solid' data-aos='zoom-in' data-aos-duration='400'>
+    <p class='font-light' data-aos='fade-in' data-aos-duration='400'>Something went wrong.</p>
   </ng-template>
   <hr [ngStyle]='{"border-color":"#e9eff5"}' class='w-5/6 lg:w-1/2 my-8 border-t-2 border-solid' data-aos='zoom-in' data-aos-duration='400'>
   <ng-container *ngFor='let blogPost of blogPosts$ | async; let i = index'>
