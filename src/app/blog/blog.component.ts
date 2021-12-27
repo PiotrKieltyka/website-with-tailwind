@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BlogPostInterface } from '../models/BlogPost.interface';
 import { BlogApiService } from '../services/blog-api.service';
-import { Observable } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { BlogPostDialogComponent } from './blog-post-dialog.component';
 import * as moment from 'moment';
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'site-blog',
@@ -15,13 +16,19 @@ import * as moment from 'moment';
 export class BlogComponent {
   blogPosts$: Observable<Array<BlogPostInterface>>;
   isLoggedIn$: Observable<boolean>;
+  loadingError$ = new Subject<boolean>();
 
   constructor(
     private blogApiService: BlogApiService,
     public authService: AuthService,
     public dialog: MatDialog,
   ) {
-    this.blogPosts$ = this.blogApiService.getAllPosts();
+    this.blogPosts$ = this.blogApiService.getAllPosts().pipe(
+      catchError(() => {
+        this.loadingError$.next(true);
+        return of([]);
+      })
+    );
     this.isLoggedIn$ = this.authService.isLoggedIn;
   }
 
