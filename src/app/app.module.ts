@@ -36,6 +36,7 @@ import {
 } from './templates/user-card/user-card.component';
 import { MatInputModule } from '@angular/material/input';
 import { BlogPostDialogComponent } from './blog/blog-post-dialog.component';
+import { LinkFollowCopyComponent } from './templates/link-follow-copy/link-follow-copy.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { BlogPostDialogComponent } from './blog/blog-post-dialog.component';
     UserProfileDialog,
     UserCardComponent,
     BlogPostDialogComponent,
+    LinkFollowCopyComponent,
   ],
   imports: [
     BrowserModule,
