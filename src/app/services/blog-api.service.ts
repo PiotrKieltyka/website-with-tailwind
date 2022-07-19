@@ -45,6 +45,13 @@ export class BlogApiService {
     );
   }
 
+  deletePostById(id: string): Observable<any> {
+    return this.http.delete(
+      this.API_URL + 'post/delete/' + id,
+      this.addHeaders(),
+    )
+  }
+
   addHeaders() {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
