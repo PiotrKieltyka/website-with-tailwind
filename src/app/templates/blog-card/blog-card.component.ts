@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import * as moment from 'moment';
 import { BlogPostDialogComponent } from '../../blog/blog-post-dialog.component';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'site-blog-card',
@@ -19,13 +20,13 @@ import { Observable } from 'rxjs';
         <ng-template [ngIf]="isLoggedIn$ | async">
           <div class='flex flex-row gap-2 py-2 mb-4'>
             <button
-              class="text-xs cursor-pointer px-4 py-1 text-red-400 rounded border border-red-400 hover:bg-red-400 hover:text-white hover:shadow-md transition-all"
+              class="text-xs cursor-pointer w-16 py-1 text-red-400 rounded border border-red-400 hover:bg-red-400 hover:text-white hover:shadow-md transition-all"
               (click)="openEditPostDialog(id)"
             >
               edit
             </button>
             <button
-              class="text-xs cursor-pointer px-4 py-1 text-red-400 rounded border border-red-400 hover:bg-red-400 hover:text-white hover:shadow-md transition-all"
+              class="text-xs cursor-pointer w-16 py-1 text-red-400 rounded border border-red-400 hover:bg-red-400 hover:text-white hover:shadow-md transition-all"
               (click)='deleteBlogPost(id)'
             >
               delete
@@ -50,6 +51,7 @@ export class BlogCardComponent {
   @Input() content: string = '';
 
   constructor(
+    private router: Router,
     private authService: AuthService,
     private blogApiService: BlogApiService,
     public dialog: MatDialog,
@@ -72,8 +74,14 @@ export class BlogCardComponent {
           if (result) {
             result.date = moment(result.date).format('MMMM D, YYYY');
             this.blogApiService.updatePostById(id, result).subscribe(
-              (data) => data,
-              (err) => this.blogApiService.handleError(err),
+              (data) => {
+                // console.log(data);
+                this.reload();
+              },
+              (err) => {
+                this.blogApiService.handleError(err);
+                this.reload();
+              },
             );
           }
         });
@@ -84,8 +92,19 @@ export class BlogCardComponent {
     this.blogApiService
       .deletePostById(id)
       .subscribe(
-        (data) => data,
-        (err) => this.blogApiService.handleError(err)
+        (data) => {
+          // console.log(data);
+          this.reload();
+        },
+        (err) => {
+          this.blogApiService.handleError(err);
+          this.reload();
+        },
       )
+  }
+
+  async reload(): Promise<boolean> {
+    await this.router.navigateByUrl('.', { skipLocationChange: true });
+    return this.router.navigateByUrl('blog');
   }
 }

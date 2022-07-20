@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { BlogPostDialogComponent } from './blog-post-dialog.component';
 import * as moment from 'moment';
 import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'site-blog',
@@ -19,6 +20,7 @@ export class BlogComponent {
   loadingError$ = new Subject<boolean>();
 
   constructor(
+    private router: Router,
     private blogApiService: BlogApiService,
     public authService: AuthService,
     public dialog: MatDialog,
@@ -43,10 +45,20 @@ export class BlogComponent {
       if (result) {
         result.date = moment(result.date).format('MMMM D, YYYY');
         this.blogApiService.addPost(result).subscribe(
-          (data) => data,
-          (err) => this.blogApiService.handleError(err),
+          (data) => {
+            // console.log(data);
+            this.reload();
+          },
+          (err) => {
+            this.blogApiService.handleError(err);
+          },
         );
       }
     });
+  }
+
+  async reload(): Promise<boolean> {
+    await this.router.navigateByUrl('.', { skipLocationChange: true });
+    return this.router.navigateByUrl('blog');
   }
 }
