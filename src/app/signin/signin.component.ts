@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { AuthService } from '../services/auth.service';
   styles: [],
 })
 export class SigninComponent {
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder, public authService: AuthService) {
+  constructor(private fb: UntypedFormBuilder, public authService: AuthService) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.required]],
